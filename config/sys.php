@@ -8,11 +8,14 @@ return [
     //用户多久(秒)不操作后会注销登陆
     'sys_session_lefttime' => 7200,
 
-    //后台访问域名，不用http://开头
-    'sys_admin_domain' => 'local.yushi.com/admin',
+    //图片的域名，必须以http://开头
+    'sys_images_domain' => 'http://local.yushi.com',
 
-    //博客访问域名
-    'sys_blog_domain' => 'local.yushi.com',
+    //后台访问域名，不用http://开头
+    'sys_admin_domain' => 'local.yushi.com',
+
+    //博客访问域名无前缀
+    'sys_blog_nopre_domain' => 'yushi.com',
 
     //上传的路径，包括ueditor的上传路径也在这里定义了，因为修改了ueditor，重新加载了这个文件。
     'sys_upload_path' => __DIR__ . '/../../upload_path',

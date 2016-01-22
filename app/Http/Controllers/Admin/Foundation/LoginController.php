@@ -44,10 +44,10 @@ class LoginController extends Controller
             return response()->json(['msg' => $error, 'result' => false])->setCallback($callback);
         }
         
-        /*if($userInfo = $loginProcess->getProcess()->check($username, $password)) {
+        if($userInfo = $loginProcess->getProcess()->check($username, $password)) {
             SC::setUserPermissionSession($aclObj->getUserAccessPermission($userInfo));
-        }*/
-        $userInfo = 1;
+        }
+        // $userInfo = 1;
 
         $success = ['msg' => '登录成功', 'result' => true, 'jumpUrl' => R('common', 'foundation.index.index')];
         $fails = ['msg' => '登录失败', 'result' => false];
